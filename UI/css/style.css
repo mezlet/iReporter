@@ -198,8 +198,8 @@ margin-right: 200px;
   border: 1px solid rgb(241, 233, 233);
   color: rgb(90, 90, 90);
   margin-bottom: 20px;
-  margin-left: 30px;
-  margin-top: -40px;
+  margin-left: -200px;
+  margin-top: 50px;
 }
 
 .new i{
@@ -208,19 +208,22 @@ margin-right: 200px;
 
 .side {
   list-style: none;
-  margin-left:25px;
+      margin-left: 55%;
+    float: right;
+    margin-top: -40px;
+    margin-right: 20px;
+    width: 100%;
 }
 .side li{
   padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 13px;
-  display: block;
-  font-family: "Lato", sans-serif;
-  font-weight: bold;
-  float:left;
-  border: none;
-  text-align: center;
-
+    text-decoration: none;
+    font-size: 13px;
+    display: block;
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    float: right;
+    border: none;
+    text-align: center;
 }
 
 .side a{
@@ -269,29 +272,37 @@ margin-left:270px;
 }
 
 .profile_btn{
-  background-color: #000033;
+  background-color: #095b9e;
   color: #ffffff;
   border: none;
   padding: 10px 20px;
   font-size: 17px;
   font-family: Raleway;
   cursor: pointer;
-  margin-left:65px;
-  margin-top:60px;
+  float: right;
+  margin-right:65px;
   border-radius: 5px;
   font-weight: bold;
+  margin-bottom: 20px;
+}
+.table_main{
+  margin-left:10px;
+  margin-right:10px;
 }
 
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
+   margin-top: 10px;
 }
 
 td, th {
-  border: 1px solid #dddddd;
+  border: 1px solid #12063f;
   text-align: left;
   padding: 8px;
+  color:rgb(124, 20, 20);
+  
 }
 
 tr:nth-child(even) {
@@ -344,13 +355,7 @@ tr:nth-child(even) {
     text-align: center;  
     }
     
-    .report_input {
-    padding: 10px;
-    width: 100%;
-    font-size: 17px;
-    font-family: Raleway;
-    border: 1px solid #aaaaaa;
-    }
+   
     
     /* Mark input boxes that gets an error on validation: */
     .report_input.invalid {
@@ -414,17 +419,7 @@ height:50px;
 font-size: 20px;
 }
 
-#clock{
-background-image:url('');
-background-size:cover;
-background-position: center;
-height: 450px; width: 850px;
-border: 1px solid #bbb;
-}
 
-#getval{
-border:none;
-}
 
 .landing{
   width: 70%;
@@ -453,4 +448,203 @@ border:none;
   text-align: center;
     margin-top: 30px;
     font-size: 1.2rem;
+}
+
+legend{
+  margin-left:70px;
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+
+.personal_details{
+  width:80%;
+  margin-left:auto;
+  margin-right: auto;
+  height: 370px;
+  margin-bottom:50px;
+  border:1px solid rgb(241, 235, 235);
+}
+
+.personal_details p {
+  margin-bottom: 50px;
+}
+.personal_details h4{
+  margin-top: 40px;
+  font-size: 22px;
+}
+.personal_details p,h4{
+  margin-left:50px;
+}
+.profile_span{
+  float:right;
+  margin-right: 50px;
+}
+.report-summary{
+  width:80%;
+  margin-left:auto;
+  margin-right: auto;
+  height: auto;
+  margin-bottom:50px;
+  border:1px solid rgb(241, 235, 235);
+}
+
+.report_total 
+
+{
+  margin-bottom:40px;
+}
+
+.report-desc{
+  margin-left:auto;
+  margin-right: auto;
+  border: 1px solid grey;
+
+}
+
+
+/*********** CONTACT FORM **********************************/
+.contact_info,  .contact_textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+.contact_submit{
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-submit:hover {
+    background-color: #45a049;
+}
+
+.contact_container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    width:800px;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    margin-top: 40px;
+}
+
+.contact_container h3{
+  text-align: center;
+  margin-bottom: 60px;
+  margin-top: 60px;
+}
+
+/************** create report form ************/
+.report_container{
+  width:100%;
+  height: 100%;
+}
+.basics{
+  width: 48%;
+  float: left;
+  margin-left: 30px;
+  height:100%;
+  margin-top:21px;
+
+}
+.files{
+  width: 48%;
+  float: right;
+  margin-right: 30px;
+  height:100%;
+
+}
+.report_select{
+  width: 90%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    margin-left:40px;
+  margin-right: 40px;
+}
+
+.report_fieldset{
+  border: 1px solid rgb(240, 237, 237);
+}
+
+.report_fieldset label{
+  text-align: center;
+
+}
+
+.report_text {
+  width: 90%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+  resize: vertical;
+  height: 800px;
+  margin-left:40px;
+  margin-right: 40px;
+}
+
+  .report_image{
+
+    width:70%
+  }
+
+  .report_input {
+    padding: 10px;
+    font-size: 17px;
+    font-family: Raleway;
+    border: 1px solid #aaaaaa;
+    margin-left:30px;
+    }
+
+    #clock{
+      background-image:url('');
+      background-size:cover;
+      background-position: center;
+      height: 380px; 
+      width: 700px;
+      border: 1px solid #bbb;
+      margin-left: 30px;
+      margin-right: 20px;
+      }
+
+      .report_label{
+        margin-left: 40px;
+      }
+      
+      #getval{
+      border:none;
+      }
+     
+.report_submit{
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    margin-right:20px;
+    margin-bottom:-15px;
+}
+
+.report_submit:hover {
+    background-color: #45a049;
 }
