@@ -648,3 +648,7 @@ legend{
 .report_submit:hover {
     background-color: #45a049;
 }
+
+.admin a{
+  text-decoration none
+}
