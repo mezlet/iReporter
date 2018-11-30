@@ -4,8 +4,6 @@ import incidentController from '../controllers/incidentController';
 
 const router = express.Router();
 
-router.get('/api/v1/users', userController.getAllUsers);
-router.get('/api/v1/incidents', incidentController.getAllIncidents);
 router.get('/api/v1/incidents/redflags', incidentController.getAllRedFlags);
 router.get('/api/v1/incidents/redflags/:id', incidentController.getRedFlag);
 router.post('/api/v1/incidents/create', incidentController.createRedFlag);
