@@ -59,7 +59,7 @@ describe('Incidents', () => {
         done();
       });
   });
-  it('should update a single incident', (done) => {
+  it('should update a specific incident', (done) => {
     chai.request(server)
       .post('/api/v1/incidents/editcomment/1')
       .send({ comment: 'hello' })
