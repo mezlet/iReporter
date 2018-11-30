@@ -32,4 +32,31 @@ describe('Incidents', () => {
         done();
       });
   });
+  it('should create incident', (done) => {
+    const incident = {
+      createdOn: '2018-10-20T17:09:00.953Z',
+      createdBy: 2,
+      type: 'red-flag',
+      location: '10.87 12.48',
+      status: 'resolved',
+      comment: 'i am here',
+    };
+    chai.request(server)
+      .post('/api/v1/incidents/create')
+      .send(incident)
+      .end((err, res) => {
+        res.should.have.status(200);
+        done();
+      });
+  });
+  it('should return a  record with a particular id', (done) => {
+    const incident = db[0].incidents;
+    chai.request(server)
+      .get('/api/v1/incidents/redflags/1')
+      .end((err, res) => {
+        res.should.have.status(200);
+        res.body.data[0].id.should.equal(incident[0].id);
+        done();
+      });
+  });
 });
