@@ -59,4 +59,14 @@ describe('Incidents', () => {
         done();
       });
   });
+  it('should update a specific incident', (done) => {
+    chai.request(server)
+      .post('/api/v1/incidents/editcomment/1')
+      .send({ comment: 'hello' })
+      .end((err, res) => {
+        res.should.have.status(200);
+        res.body.data[0].should.property('message');
+        done();
+      });
+  });
 });
