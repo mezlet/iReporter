@@ -69,4 +69,13 @@ describe('Incidents', () => {
         done();
       });
   });
+  it('should delete a single incident', (done) => {
+    chai.request(server)
+      .delete('/api/v1/incidents/delete/1')
+      .end((err, res) => {
+        res.should.have.status(200);
+        res.body.data[0].should.property('message');
+        done();
+      });
+  });
 });
