@@ -49,7 +49,7 @@ describe('Incidents', () => {
         done();
       });
   });
-  it('should return a redflag incident with a particular id', (done) => {
+  it('should return a  record with a particular id', (done) => {
     const incident = db[0].incidents;
     chai.request(server)
       .get('/api/v1/incidents/redflags/1')
