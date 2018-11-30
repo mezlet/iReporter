@@ -2,13 +2,12 @@
 import db from '../db/db';
 
 class IncidentController {
-  getAllIncidents(req, res) {
+   getAllIncidents(req, res) {
     return res.status(200).send({
       status: 200,
       data: db[0].incidents,
     });
   }
-
   getAllRedFlags(req, res) {
     const redflags = [];
     db[0].incidents.forEach((incident) => {
