@@ -1,0 +1,78 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="javascript/script.js"></script>
+    </head>
+    <body>
+    <div class="container">
+
+            <div class="banner">
+    
+                    <a href ="../index.html"><img src="images/logo.png" class="logo"></a>
+                
+                        <div id="mySidepanel" class="sidepanel">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <a href="admin.html" >Admin</a>
+                <a href="../index.html"><i class="fa fa-sign-out"></i> Sign out</a>
+                <a href="contact.html"><i class="fa fa-fw fa-envelope hide"></i> Contact Support</a>
+                <a href="profile.html"><i class="fa fa-fw fa-user hide"></i> Profile</a>
+                <a href="record.html"><i class="fa fa-fw fa-book hide"></i> My Records</a> 
+                <a href="create_record.html"><i class="fa fa-plus hide"></i> New Report</a>
+                </div>
+                <a href="javascript:void(0);" class="openbtn" onclick="openNav()">
+                <i class="fa fa-bars"></i>
+                </a>
+                
+                    </div>
+                <div class="report_container">
+    <form>
+            <input type="submit" value="Resolved" class="report_submit">
+            <input type="submit" value="Reject" class="report_submit">
+            <input type="submit" value="Under Investigation" class="report_submit">
+
+
+
+            <div class='basics'>
+                <fieldset  class="report_fieldset">
+                    <legend>Basic Information</legend>
+                    <label class="report_label">Category:</label>
+                    <div class="report_select"></div>
+                    <div class="report_text"></div>
+                
+                </fieldset>
+                    
+            </div>
+            <div class= "files" >
+                <fieldset class="report_fieldset">
+                    <legend>Additional Info</legend>
+                    <div class="report_image">
+                            <label class="report_label">Picture:</label>
+                            <div id='clock'></div>
+                        </div>
+
+                        <div class="report_image">
+                                <label class="report_label">Location:</label>
+                                <div id='clock'></div>
+                            </div>
+                </fieldset>
+            </div>
+
+
+    </form>
+                    
+
+    </div>
+    <div class="footer"><p>Designed by leticia</p></div>
+</div>
+    </body>
+    </html>
+
+

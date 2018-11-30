@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Page Title</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script src="javascript/script.js"></script>
+</head>
+<body>
+<div class="container">
+
+        <div class="banner">
+                <a href ="../index.html"><img src="images/logo.png" class="logo"></a>
+                <ul class="side">                            
+                    <li  > <a href="admin.html" >Admin</a></li>
+                        <li ><a href="../index.html"><i class="fa fa-sign-out"></i> Sign out</a></li>
+                        <li><a href="contact.html"><i class="fa fa-fw fa-envelope hide"></i> Contact Support</a></li>
+                        <li><a href="profile.html"><i class="fa fa-fw fa-user hide"></i> Profile</a></li>
+                            <li><a href="record.html"><i class="fa fa-fw fa-book hide"></i> My Records</a></li>
+                            <li><a href="create_record.html"><i class="fa fa-plus"></i> New Record</a></li>
+
+
+
+                        </ul>            
+                </div>
+            <div class="report_container">
+                <form>
+                    <input type="submit" value="Edit" class="report_submit">
+                    <a href="record.html"><button class="report_submit">Cancel</button></a>
+        
+        
+                    <div class='basics'>
+                        <fieldset  class="report_fieldset">
+                            <legend>Basic Information</legend>
+                            <label class="report_label">Title:</label>
+                            <input type ="text" class="report_select" placeholder ="e.g Overflooding in Epe ">
+        
+                            <label class="report_label">Category:</label>
+                            <select id="country" name="category" class="report_select">
+                            <option value="australia">Red-Flag</option>
+                            <option value="canada">Intervention</option>
+                            </select>
+                            <textarea class="report_text" > Write Your Report Here </textarea>
+                        
+                        </fieldset>
+                            
+                    </div>
+                    <div class= "files">
+                        <fieldset class="report_fieldset">
+                            <legend>Additional Info</legend>
+                            <div class="report_image">
+                                    <label class="report_label">Attach Picture:</label>
+                                    <div id='clock'></div>
+                                        <input type='file' id='getval' oninput="this.className = ''"  name="background-image"  class ="report_input"/><br/><br/>
+                                </div>
+        
+                                <div class="report_image">
+                                        <label class="report_label">Attach Location:</label>
+                                        <div id='clock'></div>
+                                        <button  class ="report_input">Attach Location</button>
+                                    </div>
+                        </fieldset>
+                    </div>
+        
+        
+            </form>
+                
+
+</div>
+<div class="footer"><p>Designed by leticia</p></div>
+</div>
+</body>
+</html>
+
+

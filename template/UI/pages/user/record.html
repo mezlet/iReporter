@@ -14,29 +14,34 @@
     <div class="container">
 
             <div class="banner">
-                    <a href ="index.html"><img src="images/logo.png" class="logo"></a>
-                    <ul class="side">
-                            <li style="margin-top: 4px"><a href="#" style="color:rgb(0, 0, 0);"><i class="fa fa-sign-out"></i> Sign out</a></li>
-                            <li><a href="contact.html"><i class="fa fa-fw fa-envelope hide"></i> Contact Support</a></li>
-                            <li><a href="profile.html"><i class="fa fa-fw fa-user hide"></i> Profile</a></li>
-                                <li><a href="record.html"><i class="fa fa-fw fa-book hide"></i> My Records</a></li>
-                                <li><a href="create_record.html"><i class="fa fa-plus"></i> New Report</a></li>
-
     
-    
-                            </ul>            
+                    <a href ="../index.html"><img src="images/logo.png" class="logo"></a>
+                
+                        <div id="mySidepanel" class="sidepanel">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <a href="admin.html" >Admin</a>
+                <a href="../index.html"><i class="fa fa-sign-out"></i> Sign out</a>
+                <a href="contact.html"><i class="fa fa-fw fa-envelope hide"></i> Contact Support</a>
+                <a href="profile.html"><i class="fa fa-fw fa-user hide"></i> Profile</a>
+                <a href="record.html"><i class="fa fa-fw fa-book hide"></i> My Records</a> 
+                <a href="create_record.html"><i class="fa fa-plus hide"></i> New Report</a>
+                </div>
+                <a href="javascript:void(0);" class="openbtn" onclick="openNav()">
+                <i class="fa fa-bars"></i>
+                </a>
+                
                     </div>
                     <div class ="table_main">
                                   
                             <table>
                                 <tr>
+                                 <th>Report ID</th>
+                                    <th>Date/Time</th>
                                   <th>Category</th>
-                                  <th>Description</th>
-                                  <th>Image</th>
-                                  <th>Video</th>
+                                  <th>Comment</th>
                                   <th>Location</th>
                                   <th>Status</th>
-                                  <th>Edit/Delete</th>
+                                  <th>View/Edit/Delete</th>
 
 
                                 </tr>
@@ -47,6 +52,7 @@
                                 </div>
     
     </div>
-    
+    <div class="footer"><p>Designed by leticia</p></div>
+
 </body>
 </html>

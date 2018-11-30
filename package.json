@@ -4,7 +4,7 @@
   "description": "a\u001b[3An incident report app",
   "main": "app",
   "scripts": {
-    "test": "nyc --reporter=html mocha --require @babel/register ./server/test --exit && npm run coverage",
+    "test": "mocha --require @babel/register ./server/test --exit",
     "lint": "eslint ./server --fix",
     "start:dev": "npm run lint && nodemon --exec babel-node ./server/app",
     "build": "babel server --out dir build",

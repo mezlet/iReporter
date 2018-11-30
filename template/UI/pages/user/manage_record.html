@@ -13,17 +13,35 @@
 <body>
     <div class="container">
 
-        <div class="banner">
-                <a href ="index.html"><img src="images/logo.png" class="logo"></a>
-                <ul class="side">
-                        <li style="margin-top: 4px"><a href="#" style="color:rgb(0, 0, 0);"><i class="fa fa-sign-out"></i> Sign out</a></li>
-                        <li><a href="profile.html"><i class="fa fa-fw fa-user hide"></i> Profile</a></li>
-                        <li><a href="#"><i class="fa fa-bar-chart hide"></i> Statistics </a></li>
-                            <li><a href="record.html"><i class="fa fa-fw fa-book hide"></i> Manage Records</a></li>
 
-
-                        </ul>            
+            <div class="banner">
+    
+                    <a href ="../index.html"><img src="images/logo.png" class="logo"></a>
+                
+                        <div id="mySidepanel" class="sidepanel">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <a href="../index.html"><i class="fa fa-sign-out"></i> Sign out</a>
+                <a href="manage_record.html"><i class="fa fa-fw fa-book hide"></i>Manage Records</a>
+                <a href="admin.html"><i class="fa fa-fw fa-book hide"></i>Records</a>
+                
                 </div>
+                <a href="javascript:void(0);" class="openbtn" onclick="openNav()">
+                <i class="fa fa-bars"></i>
+                </a>
+                
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
        
         
 
@@ -31,12 +49,14 @@
                                   
                                 <table>
                                     <tr>
+                                        <th>Report ID</th>
+                                        <th>Date/Time</th>
                                       <th>Category</th>
-                                      <th>Description</th>
-                                      <th>Image</th>
-                                      <th>Video</th>
+                                      <th>Username</th>
+                                      <th>Comment</th>
                                       <th>Location</th>
-                                      <th>Status</th>
+                                      <th>View Record</th>
+
 
                                     </tr>
                                    
@@ -46,6 +66,7 @@
                                     </div>
     </div>
     
-    
+    <div class="footer"><p>Designed by leticia</p></div>
+
 </body>
 </html>
