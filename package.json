@@ -1,0 +1,46 @@
+{
+  "name": "ireporter",
+  "version": "1.0.0",
+  "description": "a\u001b[3An incident report app",
+  "main": "app",
+  "scripts": {
+    "test": "nyc --reporter=html mocha --require @babel/register ./server/test --exit && npm run coverage",
+    "lint": "eslint ./server --fix",
+    "start:dev": "npm run lint && nodemon --exec babel-node ./server/app",
+    "build": "babel server --out dir build",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mezlet/iReporter.git"
+  },
+  "author": "leticia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mezlet/iReporter/issues"
+  },
+  "homepage": "https://github.com/mezlet/iReporter#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.6",
+    "@babel/node": "^7.0.0",
+    "@babel/plugin-syntax-object-rest-spread": "^7.0.0",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/register": "^7.0.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.0",
+    "coveralls": "^3.0.2",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.7",
+    "nyc": "^13.1.0"
+  }
+}
