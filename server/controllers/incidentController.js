@@ -57,24 +57,23 @@ class IncidentController {
         break;
       }
     }
-    if (result) {
-      res.status(200).send({
+    if (result.length) {
+      return res.status(200).send({
         status: 200,
         data: result,
       });
-    } else {
-      res.send({
-        status: 404,
-        message: 'sorry id does not exist',
-      });
     }
+    return res.send({
+      status: 404,
+      message: 'sorry id does not exist',
+    });
   }
 
   editLocation(req, res) {
     const id = parseInt(req.params.id, 10);
     const incident = db[0].incidents;
     if (!req.body.location) {
-      res.send({
+      return res.send({
         message: 'location field is required',
       });
     }
@@ -83,7 +82,7 @@ class IncidentController {
         const record = incident[i];
         const newLocation = req.body.location;
         record.location = newLocation;
-        res.send({
+        return res.send({
           status: 200,
           data: [
             {
@@ -94,7 +93,7 @@ class IncidentController {
         });
       }
     }
-    res.send({
+    return res.send({
       status: 404,
       message: 'can"t find id',
     });
@@ -103,17 +102,12 @@ class IncidentController {
   editComment(req, res) {
     const id = parseInt(req.params.id, 10);
     const incident = db[0].incidents;
-    if (!req.body.comment) {
-      res.send({
-        message: 'comment field is required',
-      });
-    }
     for (let i = 0; i < incident.length; i += 1) {
       if (incident[i].id === id) {
         const record = incident[i];
         const newComment = req.body.comment;
         record.comment = newComment;
-        res.send({
+        return res.send({
           status: 200,
           data: [
             {
@@ -125,7 +119,7 @@ class IncidentController {
         });
       }
     }
-    res.send({
+    return res.send({
       status: 404,
       message: 'can"t find id',
     });
@@ -139,7 +133,7 @@ class IncidentController {
         const record = incident[i];
         const index = i;
         incident.splice(index, 1);
-        res.send({
+        return res.send({
           status: 200,
           data: [
             {
@@ -151,7 +145,7 @@ class IncidentController {
         });
       }
     }
-    res.send({
+    return res.send({
       status: 404,
       message: 'can"t find id',
     });
