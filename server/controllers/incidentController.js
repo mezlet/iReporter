@@ -93,6 +93,37 @@ class IncidentController {
       message: 'can"t find id',
     });
   }
+
+  editComment(req, res) {
+    const id = parseInt(req.params.id, 10);
+    const incident = db[0].incidents;
+    if (!req.body.comment) {
+      res.send({
+        message: 'comment field is required',
+      });
+    }
+    for (let i = 0; i < incident.length; i += 1) {
+      if (incident[i].id === id) {
+        const record = incident[i];
+        const newComment = req.body.comment;
+        record.comment = newComment;
+        res.send({
+          status: 200,
+          data: [
+            {
+              id: record.id,
+              message: "updated red-flag record's comment",
+            },
+          ],
+          record: incident,
+        });
+      }
+    }
+    res.send({
+      status: 404,
+      message: 'can"t find id',
+    });
+  }
 }
 
 const incidentControllers = new IncidentController();
