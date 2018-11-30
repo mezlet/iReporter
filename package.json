@@ -6,8 +6,10 @@
   "scripts": {
     "test": "mocha --require @babel/register ./server/test --exit",
     "lint": "eslint ./server --fix",
+    "start": "node build/app",
     "start:dev": "npm run lint && nodemon --exec babel-node ./server/app",
-    "build": "babel server --out dir build",
+    "postinstall": "npm run build",
+    "build": "babel server --out-dir build",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {

@@ -28,7 +28,7 @@ const ireportdb = [
     incidents: [
       {
         id: 1,
-        createdOn: '2018-11-26T17:09:52.953Z',
+        createdOn: '2018-11-25T17:10:52.953Z',
         createdBy: 2, // represents the user who created this record
         type: 'red-flag', // [red-flag, intervention]
         location: '6.56 3.37', // Lat Long coordinates
@@ -37,8 +37,8 @@ const ireportdb = [
       },
       {
         id: 2,
-        createdOn: '2018-11-26T17:09:52.953Z',
-        createdBy: 2, // represents the user who created this record
+        createdOn: '2018-11-26T17:11:52.953Z',
+        createdBy: 3, // represents the user who created this record
         type: 'red-flag', // [red-flag, intervention]
         location: '6.87 3.48', // Lat Long coordinates
         status: 'under investigation', // [draft, under investigation, resolved, rejected]
@@ -46,8 +46,8 @@ const ireportdb = [
       },
       {
         id: 3,
-        createdOn: '2018-11-26T17:09:52.953Z',
-        createdBy: 3, // represents the user who created this record
+        createdOn: '2018-11-27T17:12:52.953Z',
+        createdBy: 5, // represents the user who created this record
         type: 'incident', // [red-flag, intervention]
         location: '6.766 3.17', // Lat Long coordinates
         status: 'rejected', // [draft, under investigation, resolved, rejected]
@@ -55,7 +55,7 @@ const ireportdb = [
       },
       {
         id: 4,
-        createdOn: '2018-11-26T17:09:52.953Z',
+        createdOn: '2018-11-28T17:08:52.953Z',
         createdBy: 4, // represents the user who created this record
         type: 'red-flag', // [red-flag, intervention]
         location: '6.516 3.987', // Lat Long coordinates

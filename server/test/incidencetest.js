@@ -12,6 +12,7 @@ chai.should();
 
 chai.use(chaiHttp);
 
+
 describe('Incidents', () => {
   it('should return a list of all incident', (done) => {
     chai.request(server)
@@ -32,7 +33,18 @@ describe('Incidents', () => {
         done();
       });
   });
-  it('should create incident', (done) => {
+  it('should return all incidents of type redflag', (done) => {
+    chai.request(server)
+      .get('/api/v1/incidents/redflags')
+      .end((err, res) => {
+        res.should.have.status(200);
+        res.body.data.should.be.a('array');
+        res.body.data[0].type.should.equal('red-flag');
+
+        done();
+      });
+  });
+  it('should POST incident', (done) => {
     const incident = {
       createdOn: '2018-10-20T17:09:00.953Z',
       createdBy: 2,
@@ -59,7 +71,7 @@ describe('Incidents', () => {
         done();
       });
   });
-  it('should update a specific incident', (done) => {
+  it('should update a single incident', (done) => {
     chai.request(server)
       .post('/api/v1/incidents/editcomment/1')
       .send({ comment: 'hello' })
