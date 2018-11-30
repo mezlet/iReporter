@@ -49,4 +49,14 @@ describe('Incidents', () => {
         done();
       });
   });
+  it('should return a redflag incident with a particular id', (done) => {
+    const incident = db[0].incidents;
+    chai.request(server)
+      .get('/api/v1/incidents/redflags/1')
+      .end((err, res) => {
+        res.should.have.status(200);
+        res.body.data[0].id.should.equal(incident[0].id);
+        done();
+      });
+  });
 });
