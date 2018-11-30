@@ -72,11 +72,6 @@ class IncidentController {
   editLocation(req, res) {
     const id = parseInt(req.params.id, 10);
     const incident = db[0].incidents;
-    if (!req.body.location) {
-      return res.send({
-        message: 'location field is required',
-      });
-    }
     for (let i = 0; i < incident.length; i += 1) {
       if (incident[i].id === id) {
         const record = incident[i];
