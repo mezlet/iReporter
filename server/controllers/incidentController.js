@@ -124,6 +124,32 @@ class IncidentController {
       message: 'can"t find id',
     });
   }
+
+  deleteIncident(req, res) {
+    const id = parseInt(req.params.id, 10);
+    const incident = db[0].incidents;
+    for (let i = 0; i < incident.length; i += 1) {
+      if (incident[i].id === id) {
+        const record = incident[i];
+        const index = i;
+        incident.splice(index, 1);
+        res.send({
+          status: 200,
+          data: [
+            {
+              id: record.id,
+              message: 'red-flag record has been deleted',
+            },
+          ],
+          record: incident,
+        });
+      }
+    }
+    res.send({
+      status: 404,
+      message: 'can"t find id',
+    });
+  }
 }
 
 const incidentControllers = new IncidentController();
