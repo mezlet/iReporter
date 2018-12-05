@@ -1,3 +1,8 @@
+/** index container*/
+.index_container{
+  margin-bottom: 50px;
+}
+
 
 /*** banner**/
 .banner{
@@ -70,17 +75,25 @@ font-size: 1.2rem;
 
 
 /**login form**/
+.login_container{
+  background-image: url("../images/bg2.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
+  position:absolute;
+  width:100%;
+}
 .log_form {
 width: 500px;
-margin-left: auto;
-border: 1px solid rgb(230, 227, 227);
-height: 600px;
-margin-bottom: 40px;
-margin-top: 50px;
+margin-left: 160px;
+border: 1px solid rgb(165, 154, 154);
+height: 500px;
+margin-bottom: 100px;
+margin-top: 100px;
 margin-right: auto;
-padding-left: 25px;
+padding-left: 20px;
 min-width: 320px;
 padding-right: 25px;
+padding-bottom: 100px;
 display:block;
 }
 
@@ -88,7 +101,7 @@ display:block;
 h2 {
 text-align: center;  
 margin-top:20px;
-color: rgb(70, 70, 70);
+color: rgb(250, 248, 248);
 margin-bottom: 20px;
 }
 
@@ -114,7 +127,7 @@ line-height: 1.2;
 }
 .info:hover{
 
-border-bottom: 1px solid blue;
+border-bottom: 1px solid rgb(3, 3, 78);
 }
 
 .info:focus{
@@ -139,9 +152,9 @@ padding: 10px 20px;
 font-size: 17px;
 font-family: Raleway;
 cursor: pointer;
-margin-left:65px;
+margin-left:35%;
 margin-top:60px;
-width:70%;
+width:100%;
 border-radius: 5px;
 font-weight: bold;
 text-decoration:none;
@@ -209,9 +222,9 @@ line-height: 1.2;
 /************ sign up form */
 #signup_form {
 width: 700px;
-margin-left: auto;
+margin-left: 30px;
 border: 1px solid rgb(230, 227, 227);
-height: 800px;
+height: auto;
 margin-bottom: 40px;
 margin-top: 50px;
 margin-right: auto;
@@ -221,7 +234,7 @@ margin-right: auto;
 
 .signup_form {
 width: 50%;
-margin-left: 40%;
+margin-left: 20%;
 border: 1px solid rgb(230, 227, 227);
 height: 100%;
 margin-bottom: 40px;
@@ -233,6 +246,7 @@ display:block;
 }
 .form_extra{
 margin-right:50px;
+color:white;
 }
 .info {
 width: 80%;
@@ -370,6 +384,7 @@ border-radius: 5px;
 font-weight: bold;
 margin-bottom: 20px;
 }
+/** record table **/
 .table_main{
 margin-left:10px;
 margin-right:10px;
@@ -393,6 +408,19 @@ color:rgb(124, 20, 20);
 tr:nth-child(even) {
 background-color: #dddddd;
 }
+.tbl_icon{
+  font-size:24px;
+  margin-left:20px;
+  margin-right: 20px;
+  color:rgb(55, 16, 230);
+}
+#delete{
+color:red;
+}
+#eye{
+  color:green;
+}
+
 
 .signup{
 text-decoration: none;
@@ -499,6 +527,16 @@ margin-bottom:50px;
 border:1px solid rgb(241, 235, 235);
 }
 
+.report-list{
+  width:80%;
+  margin-left:auto;
+  margin-right: auto;
+  height: auto;
+  margin-bottom:50px;
+  border:1px solid rgb(241, 235, 235);
+  }
+  
+
 .report_total 
 
 {
@@ -558,131 +596,242 @@ margin-top: 60px;
 }
 
 /************** create report form ************/
+
 .report_container{
-width:100%;
-height: 70%;
-background-color: blue;
-
+  padding-bottom:30px;
 }
-.basics{
-width: 48%;
-float: left;
-margin-left: 30px;
-height:100%;
-margin-top:21px;
-
-}
-.files{
-width: 48%;
-float: right;
-margin-right: 30px;
-height:100%;
-
-}
-.report_select{
-width: 90%;
-padding: 12px;
-border: 1px solid #ccc;
-border-radius: 4px;
-box-sizing: border-box;
-margin-top: 6px;
-margin-bottom: 16px;
-resize: vertical;
-margin-left:40px;
-margin-right: 40px;
+.report_heading{
+  width:100%;
+  height:100px;
 }
 
-.report_fieldset{
-border: 1px solid rgb(240, 237, 237);
-height: 800px;
+.report_heading h1{
+  text-align: left;
+   margin-left:30px;
+   padding-top:30px;
+   font-size: 20px;
+}
+.report_edit{
+  width:100%;
+  height:20px;
+  background-color: #000033;
 }
 
-.report_fieldset label{
-text-align: center;
-
+.report_form{
+  width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+  
 }
 
-.report_text {
-width: 90%;
-padding: 12px;
-border: 1px solid #ccc;
-border-radius: 4px;
-box-sizing: border-box;
-margin-bottom: 16px;
-resize: vertical;
-height: 500px;
-margin-left:40px;
-margin-right: 40px;
+.form_content{
+  width: 75%;
+  height: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 170px;
+  margin-right: 100px;
 }
-
-.report_image{
-
-width:70%;
-margin-top: -20px;
+.report_form h1{
+  border-bottom:1px solid rgb(226, 222, 222);
+  text-align: left;
+  font-size:20px;
+  color:rgb(17, 5, 61);
+  margin-bottom:30px;
+  padding-top: 20px;
 }
-
-.report_input {
-padding: 10px;
-font-size: 17px;
-font-family: Raleway;
-border: 1px solid #aaaaaa;
-margin-left:65px;
-}
-
-#clock{
-background-image:url('');
-background-size:cover;
-background-position: center;
-height: 300px; 
-width: 600px;
-border: 1px solid #bbb;
-margin-left: 70px;
-}
-
 .report_label{
-margin-left: 70px;
-}
+  margin-left: 40px;
+  font-weight: bolder;
+  font-size: 20px;
+  }
+  .report_input {
+    padding: 10px;
+    font-size: 17px;
+    font-family: Raleway;
+    border: 1px solid #aaaaaa;
+    margin-left:65px;
+    }
+    .report_text {
+      width: 90%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-bottom: 16px;
+      resize: vertical;
+      height: 350px;
+      margin-left:40px;
+      margin-right: 40px;
+      }
+      .report_select{
+        width: 90%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+        margin-left:40px;
+        margin-right: 40px;
+        }
+  .form_footer{
+    width:100%;
+    height:150px;
+    background-color: white;
+    border-top: 1px solid grey;
+    
+  } 
 
-#getval{
-border:none;
-}
+  .form_footer p{
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+    color: #095b9e;
+    padding-top: 30px;
+  }
 
-.report_submit{
-background-color: #4CAF50;
-color: white;
-padding: 12px 20px;
-border: none;
-border-radius: 4px;
-cursor: pointer;
-float: right;
-margin-right:20px;
-margin-bottom:-15px;
-}
+  .form_btn_submit {
+    width: 100px;
+    height: 50px;
+    margin-left: 600px;
+    color: white;
+    background-color: #45a049;
+    border: none;
+    border-radius: 7px;
+    margin-top: 40px;
+  }
 
-.report_submit:hover {
-background-color: #45a049;
-}
+  .form_btn_reset{
+    margin-left:5opx;
+    width: 100px;
+    height: 50px;
+    color: white;
+    background-color: #3952dd;
+    border: none;
+    border-radius: 7px;
+    margin-top: 40px;
 
+  }
+
+  .form_btn_cancel{
+    margin-left:5opx;
+    width: 100px;
+    height: 50px;
+    color: white;
+    background-color: #df1919;
+    border: none;
+    border-radius: 7px;
+
+  }
+
+  /** footer */
 .footer{
 width:100%;
 height:100px;
 background-color:#000033;
-margin-top:70%;
+padding-top: 50px;
 
 }
 .footer p{
 color:white;
 text-align:center;
-font-size: 15px;
+font-size: 20px;
 }
 
+
+/* --- Admin btns ---*/
+
+#resolve_btn{
+  background-color: green;
+  border: none;
+  color: white;
+  width: 120px;
+  height:30px;
+  border-radius: 7px;
+}
+
+#investigate_btn{
+  background-color: blue;
+  border: none;
+  color: white;
+  width: 120px;
+  height:30px;
+  border-radius: 7px;
+
+}
+
+#reject_btn{
+  background-color: red;
+  border: none;
+  color: white;
+  width: 120px;
+  height:30px;
+  border-radius: 7px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
 @media only screen and (max-width: 6000px) {
-
-
-
-
-
-
 .side{
 width:20%;
 display:inline-block;
@@ -737,7 +886,7 @@ width:70%;
 }
 }
 
-
+*/
 
 
 
@@ -841,10 +990,6 @@ width:70%;
   
   
 }
-
-
-
-
 
 
 

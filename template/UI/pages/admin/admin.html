@@ -1,62 +1,80 @@
-        <!DOCTYPE html>
-        <html>
-        <head>
-            <meta charset="utf-8" />
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <title>Page Title</title>
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-            <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
-            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-            <script src="javascript/script.js"></script>
-        </head>
-        <body>
-            <div class="container">
+<!DOCTYPE html>
+<html>
 
-                    <div class="banner">
-    
-                            <a href ="../index.html"><img src="images/logo.png" class="logo"></a>
-                        
-                                <div id="mySidepanel" class="sidepanel">
-                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-                        <a href="../index.html"><i class="fa fa-sign-out"></i> Sign out</a>
-                        <a href="manage_record.html"><i class="fa fa-fw fa-book hide"></i>Manage Records</a>
-                        <a href="admin.html"><i class="fa fa-fw fa-book hide"></i>Records</a>
-                        
-                        </div>
-                        <a href="javascript:void(0);" class="openbtn" onclick="openNav()">
-                        <i class="fa fa-bars"></i>
-                        </a>
-                        
-                            </div>
-        
-        
-            
-                
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../../css/style.css" />
 
-                                    <div class ="table_main">
-                                        
-                                        <table>
-                                            <tr>
-                                            <th>Report ID</th>
-                                            <th>Date/Time</th>
-                                            <th>Category</th>
-                                            <th>Username</th>
-                                            <th>Comments</th>
-                                            <th>Location</th>
-                                            <th>Status</th>
-                                            <th>View Record</th>
+</head>
 
+<body>
+    <div class="container">
 
-                                            </tr>
-                                        
-                                        </table>
-                                        
-                                        
-                                            </div>
+        <div class="banner">
+
+            <a href="../../../index.html"><img src="../../images/logo.png" class="logo"></a>
+
+            <div id="mySidepanel" class="sidepanel">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <a href="../index.html"><i class="fa fa-sign-out hide"></i> Sign out</a>
+                <a href="manage_record.html"><i class="fa fa-fw fa-book hide"></i>Manage Records</a>
+                <a href="admin.html"><i class="fa fa-fw fa-book hide"></i>Records</a>
+
             </div>
-            
-            <div class="footer"><p>Designed by leticia</p></div>
+            <a href="javascript:void(0);" class="openbtn" onclick="openNav()">
+                <i class="fa fa-bars"></i>
+            </a>
 
-        </body>
-        </html>
+        </div>
+
+
+
+
+
+        <div class="table_main">
+
+            <table>
+                <tr>
+                    <th>Report ID</th>
+                    <th>Date/Time</th>
+                    <th>Category</th>
+                    <th>Comment</th>
+                    <th>Location</th>
+                    <th>Status</th>
+
+                </tr>
+                <tr>
+                    <td><input tpe="text" placeholder="1"></td>
+                    <td><input tpe="text" placeholder="2018-11-25T17:10:52.953Z"></td>
+                    <td><input tpe="text" placeholder="red-flag"></td>
+                    <td><input tpe="text" placeholder="Le Lorem Ipsum est simplement du faux texte employé dans "></td>
+                    <td><input tpe="text" placeholder="lat 6.56, long 3.37"></td>
+                    <td><input tpe="text" placeholder="pending"></td>
+                    <td><i class="fa fa-eye tbl_icon" id="eye"></td>
+                </tr>
+
+                <tr>
+                    <td><input tpe="text" placeholder="2"></td>
+                    <td><input tpe="text" placeholder="2018-11-25T17:10:52.953Z"></td>
+                    <td><input tpe="text" placeholder="intervention"></td>
+                    <td><input tpe="text" placeholder="Le Lorem Ipsum est simplement du faux texte employé dans "></td>
+                    <td><input tpe="text" placeholder="lat 6.56, long 3.37"></td>
+                    <td><input tpe="text" placeholder="pending"></td>
+                    <td><i class="fa fa-eye tbl_icon" id="eye"></td>
+                </tr>
+
+            </table>
+
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
