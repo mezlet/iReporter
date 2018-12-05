@@ -1,70 +1,34 @@
 const ireportdb = [
   {
-    users: [
-      {
-        id: 1,
-        firstname: 'Leticia',
-        lastname: 'Esiagu',
-        othername: 'Chimezie',
-        email: 'esiaguleticia@gmail.com',
-        phoneNumber: '08023512632',
-        username: 'letty',
-        registered: '2018-11-24T17:08:52.953Z',
-        isAdmin: false,
-      },
-
-      {
-        id: 2,
-        firstname: 'Lynda',
-        lastname: 'Solomon',
-        othername: 'Shola',
-        email: 'shola@gmail.com',
-        phoneNumber: '08033415631',
-        username: 'admin',
-        registered: '2018-11-26T17:09:52.953Z',
-        isAdmin: true,
-      },
-    ],
-    incidents: [
-      {
-        id: 1,
-        createdOn: '2018-11-25T17:10:52.953Z',
-        createdBy: 2, // represents the user who created this record
-        type: 'red-flag', // [red-flag, intervention]
-        location: '6.56 3.37', // Lat Long coordinates
-        status: 'resolved', // [draft, under investigation, resolved, rejected]
-        comment: 'hello',
-      },
-      {
-        id: 2,
-        createdOn: '2018-11-26T17:11:52.953Z',
-        createdBy: 3, // represents the user who created this record
-        type: 'red-flag', // [red-flag, intervention]
-        location: '6.87 3.48', // Lat Long coordinates
-        status: 'under investigation', // [draft, under investigation, resolved, rejected]
-        comment: 'hello',
-      },
-      {
-        id: 3,
-        createdOn: '2018-11-27T17:12:52.953Z',
-        createdBy: 5, // represents the user who created this record
-        type: 'incident', // [red-flag, intervention]
-        location: '6.766 3.17', // Lat Long coordinates
-        status: 'rejected', // [draft, under investigation, resolved, rejected]
-        comment: 'hello',
-      },
-      {
-        id: 4,
-        createdOn: '2018-11-28T17:08:52.953Z',
-        createdBy: 4, // represents the user who created this record
-        type: 'red-flag', // [red-flag, intervention]
-        location: '6.516 3.987', // Lat Long coordinates
-        status: 'rejected', // [draft, under investigation, resolved, rejected]
-        comment: 'hello',
-      },
-    ],
+    id: 1,
+    createdon: 1543807386196,
+    createdby: 2,
+    type: 'red-flag',
+    status: 'pending',
+    comment: 'comment1',
+    location: 'lat 234, long 234',
+    modifiedDate: 1543807386196,
   },
-
+  {
+    id: 2,
+    createdon: 1543807386196,
+    createdby: 3,
+    type: 'red-flag',
+    status: 'pending',
+    comment: 'comment2',
+    location: 'lat 234, long 234',
+    modifiedDate: 1543807386196,
+  },
+  {
+    id: 3,
+    createdon: 1543807386196,
+    createdby: 4,
+    type: 'intervention',
+    status: 'pending',
+    comment: 'comment1',
+    location: 'lat 234, long 234',
+    modifiedDate: 1543807386196,
+  },
 ];
 
 
