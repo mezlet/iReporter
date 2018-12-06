@@ -27,11 +27,9 @@ describe('Incidents', () => {
   });
   it('should create redflag record', (done) => {
     const incident = {
-      createdon: '2018-10-20T17:09:00.953Z',
       createdby: 2,
       type: 'red-flag',
-      location: '10.87, 12.48',
-      status: 'resolved',
+      location: '10.87 12.48',
       comment: 'i am here',
     };
     chai.request(server)
@@ -39,6 +37,8 @@ describe('Incidents', () => {
       .send(incident)
       .end((err, res) => {
         res.should.have.status(201);
+        res.body.id.should.be.a('number');
+        res.body.should.be.a('object');
         res.body.should.have.property('createdon');
         done();
       });
@@ -53,12 +53,9 @@ describe('Incidents', () => {
   });
   it('should update a specific red flag record', (done) => {
     const newRecord = {
-      id: 1,
-      createdon: '2018-11-25T17:10:52.953Z',
       createdby: 2,
       type: 'red-flag',
       location: '6.56 3.37',
-      status: 'resolved',
       comment: 'wtz up',
     };
     chai.request(server)
