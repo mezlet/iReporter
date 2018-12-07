@@ -774,6 +774,7 @@ margin-top: 60px;
    margin-left:30px;
    padding-top:30px;
    font-size: 20px;
+
 }
 .report_edit{
   width:100%;
@@ -788,6 +789,29 @@ margin-top: 60px;
   margin-bottom: 30px;
   
 }
+.form_content{
+  width: 75%;
+  height: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 170px;
+  margin-right: 100px;
+}
+=======
+}
+.report_edit{
+  width:100%;
+  height:20px;
+  background-color: #000033;
+}
+
+.report_form{
+  width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+  
+}
+
 .form_content{
   width: 75%;
   height: auto;
@@ -944,6 +968,89 @@ font-size: 20px;
 
 
 
+/* --- Admin btns ---*/
+
+#resolve_btn{
+  background-color: green;
+  border: none;
+  color: white;
+  width: 120px;
+  height:30px;
+  border-radius: 7px;
+}
+
+#investigate_btn{
+  background-color: blue;
+  border: none;
+  color: white;
+  width: 120px;
+  height:30px;
+  border-radius: 7px;
+
+}
+
+#reject_btn{
+  background-color: red;
+  border: none;
+  color: white;
+  width: 120px;
+  height:30px;
+  border-radius: 7px;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
+@media only screen and (max-width: 6000px) {
+.side{
+width:20%;
+display:inline-block;
+position: relative;
+margin-top:60px;
+margin-right:80%;
+background-color: blue;
+height:100%;
+}
+.icon{
+display:block;
+margin-left:28%;
+margin-top:-40px;
+}
+.side a{
+display:block;
+color:white;
+}
 
 
 
@@ -978,6 +1085,15 @@ font-size: 20px;
 
 
 
+
+
+
+
+
+
+
+
+*/
 
 
 
@@ -1012,10 +1128,6 @@ font-size: 20px;
 
 
   
-
-
-
-
 
 
 

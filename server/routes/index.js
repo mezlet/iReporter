@@ -1,16 +1,16 @@
 import express from 'express';
-import incidentController from '../controllers/incidentController';
+import redFlagController from '../controllers/redFlagController';
 
 
 const router = express.Router();
 
-router.get('/api/v1/incidents', incidentController.getAllIncidents);
-router.get('/api/v1/incidents/redflags', incidentController.getAllRedFlags);
-router.get('/api/v1/incidents/redflags/:id', incidentController.getRedFlag);
-router.post('/api/v1/incidents/create', incidentController.createRedFlag);
-router.post('/api/v1/incidents/editlocation/:id', incidentController.editLocation);
-router.post('/api/v1/incidents/editcomment/:id', incidentController.editComment);
-router.delete('/api/v1/incidents/delete/:id', incidentController.deleteIncident);
+router.get('/api/v1/red-flag', redFlagController.getAll);
+router.get('/api/v1/red-flag/:id', redFlagController.getOne);
+router.post('/api/v1/red-flag', redFlagController.createRecord);
+router.patch('/api/v1/red-flag/:id', redFlagController.update);
+router.patch('/api/v1/red-flag/:id/location', redFlagController.updateLocation);
+router.patch('/api/v1/red-flag/:id/comment', redFlagController.updateComment);
+router.delete('/api/v1/red-flag/:id', redFlagController.delete);
 
 router.use((req, res) => {
   res.status(404).send({
