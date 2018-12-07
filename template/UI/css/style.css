@@ -38,7 +38,171 @@ margin-right: 200px;
 }
 
 
+@media only screen and (max-width: 1000px) {
+  .logo{
+    margin-top:20px;
+    width:10%;
+    height:60px;
+    border:none;
+    margin-bottom:50px;
+    }
 
+    .banner{
+      width:160%;
+      height:150px;
+      border:none;
+    }
+
+    .sidepanel{
+      margin-bottom: -480%;
+      margin-top: 50px;
+      width:100%;
+      height: 400px;
+      position:relative;
+      clear:both;
+      margin-left:auto;
+      margin-right: auto;
+    }
+
+    .sidepannel a{
+      margin-right: 40px;
+    }
+
+    .report_edit{
+      width:600%;
+      height:20px;
+      background-color: #000033;
+      position: relative;
+      margin-left:50px;
+    }
+    .report_form{
+      width: 100%;
+      height: auto;
+      margin-bottom: 30px;
+      margin-right:auto;
+      margin-left:auto;
+      
+    }
+    .form_content{
+      width: 75%;
+      height: auto;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      margin-left: 170px;
+      margin-right: 100px;
+      margin-bottom:50px;
+    }
+    .report_form h1{
+      border-bottom:1px solid rgb(226, 222, 222);
+      text-align: left;
+      font-size:20px;
+      color:rgb(17, 5, 61);
+      margin-bottom:30px;
+      padding-top: 20px;
+    }
+    .report_label{
+      margin-left: 40px;
+      font-weight: bolder;
+      font-size: 20px;
+      }
+      .report_input {
+        padding: 10px;
+        font-size: 17px;
+        font-family: Raleway;
+        border: 1px solid #aaaaaa;
+        margin-left:65px;
+        }
+        .report_text {
+          width: 90%;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+          margin-bottom: 16px;
+          resize: vertical;
+          height: 350px;
+          margin-left:40px;
+          margin-right: 40px;
+          }
+          .report_select{
+            width: 90%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+            margin-left:40px;
+            margin-right: 40px;
+            }
+      .form_footer{
+        width:200%;
+        height:150%;
+        background-color: blue;
+        border: 1px solid grey;
+        margin-bottom:170px;
+        margin-left:50px;
+
+        
+      } 
+      .footer{
+display:none;
+      }
+    
+      .form_footer p{
+        text-align: center;
+        font-size: 45px;
+        font-weight: bold;
+        color: #095b9e;
+        padding-top: 30px;
+
+      }
+    
+      .form_btn_submit {
+        width: 100px;
+        height: 50px;
+        color: white;
+        background-color: #45a049;
+        border: none;
+        border-radius: 7px;
+        margin-top: 50%;
+        margin-left: -600px;
+        margin-right:300px;
+        position:relative;
+      }
+    
+      .form_btn_reset{
+        margin-left:5opx;
+        width: 100px;
+        height: 50px;
+        color: white;
+        background-color: #3952dd;
+        border: none;
+        border-radius: 7px;
+        margin-top: -50px;
+    
+      }
+    
+      .form_btn_cancel{
+        margin-left:5opx;
+        width: 100px;
+        height: 50px;
+        color: white;
+        background-color: #df1919;
+        border: none;
+        border-radius: 7px;
+        margin-top: -50px;
+      }
+    
+
+    
+
+      table.main{
+        width:30%;
+      }
+
+}
 
 
 
@@ -610,6 +774,30 @@ margin-top: 60px;
    margin-left:30px;
    padding-top:30px;
    font-size: 20px;
+
+}
+.report_edit{
+  width:100%;
+  height:20px;
+  background-color: #000033;
+}
+
+
+.report_form{
+  width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+  
+}
+.form_content{
+  width: 75%;
+  height: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 170px;
+  margin-right: 100px;
+}
+=======
 }
 .report_edit{
   width:100%;
@@ -729,7 +917,7 @@ margin-top: 60px;
   /** footer */
 .footer{
 width:100%;
-height:100px;
+height:40px;
 background-color:#000033;
 padding-top: 50px;
 
@@ -780,21 +968,34 @@ font-size: 20px;
 
 
 
+/* --- Admin btns ---*/
 
+#resolve_btn{
+  background-color: green;
+  border: none;
+  color: white;
+  width: 120px;
+  height:30px;
+  border-radius: 7px;
+}
 
+#investigate_btn{
+  background-color: blue;
+  border: none;
+  color: white;
+  width: 120px;
+  height:30px;
+  border-radius: 7px;
 
+}
 
-
-
-
-
-
-
-
-
-
-
-
+#reject_btn{
+  background-color: red;
+  border: none;
+  color: white;
+  width: 120px;
+  height:30px;
+  border-radius: 7px;
 
 
 
@@ -851,40 +1052,46 @@ display:block;
 color:white;
 }
 
-.table_main{
-margin-left:100px;
-}
-
-.contact_container{
-width: 80%;
-}
-
-
-footer{
-margin-top:100%;
-overflow: hidden;
-}
-}
 
 
 
-@media only screen and (max-width: 1400px) {
-.basics{
-width:70%
-}
-.report_text{
-height:300px;
-width:70%;
-margin-left:40px;;
-}
-.report_select{
-width:70%
-}
-.files{
-width:70%;
 
-}
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 */
 
@@ -892,10 +1099,8 @@ width:70%;
 
 /*** banner**/
 
-.closebtn{
-  display: none;
-  }
-  
+
+ 
   .openbtn{
     display:none;
   }
@@ -929,67 +1134,6 @@ width:70%;
 
 
 
-
-
-
-/*********display banner **********/
-
-
-
-@media only screen and (max-width: 600px) {
-
-  .sidepanel  {
-    width: 0;
-    z-index: 1;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgb(8, 2, 44);
-    overflow-x: hidden;
-    transition: 0.5s;
-    overflow:hidden;
-    clear:both;
-
-  }
-  
-  .sidepanel a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-    text-align:right;
-    float:left;
-    
-  }
-  
-  .sidepanel a:hover {
-    color: #f1f1f1;
-  }
-  
-  .sidepanel .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    display:none;
-    
-  }
-  
-  .openbtn {
-    font-size: 20px;
-    cursor: pointer;
-    color: #111;
-    padding: 10px 15px;
-    border: none;
-    display:block;
-    margin-top:-40px;
-    margin-left: 120px;
-  }
-  
-  
-}
 
 
 
