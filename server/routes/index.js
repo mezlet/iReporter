@@ -13,5 +13,4 @@ router.patch('/api/v1/red-flag/:id/comment', redFlagController.updateComment);
 router.delete('/api/v1/red-flag/:id', redFlagController.delete);
 
 
-
 export default router;

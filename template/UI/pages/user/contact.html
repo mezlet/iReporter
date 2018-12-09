@@ -8,29 +8,27 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" media="screen" href="../../css/style.css" />
 <body>
-<div class="container">
+  <div class="container">
 
-                <div class="banner">
-    
-                        <a href ="../../../index.html"><img src="../../images/logo.png" class="logo"></a>
-                    
-                            <div id="mySidepanel" class="sidepanel">
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-                    <a href="../admin/admin.html">Admin</a>
-                    <a href="../../../index.html"><i class="fa fa-sign-out hide"></i> Sign out</a>
-                    <a href="contact.html"><i class="fa fa-fw fa-envelope hide"></i> Contact Support</a>
-                    <a href="profile.html"><i class="fa fa-fw fa-user hide"></i> Profile</a>
-                    <a href="record.html"><i class="fa fa-fw fa-book hide"></i> My Records</a> 
-                    <a href="create_record.html"><i class="fa fa-plus hide"></i> New Report</a>
-                    </div>
-                    <a href="javascript:void(0);" class="openbtn" onclick="openNav()">
-                    <i class="fa fa-bars"></i>
-                    </a>
-                    
-                        </div>
-<div class="main>">
+      <div class="topnav" id="myTopnav">
+          <div class = "logo_bdy">
+                  <a href="../../../index.html"><img src="../../images/logo.png" class="logo"></a>
 
-<div class="contact_container">
+          </div>
+<div class =" navbdy">
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+      <a href="../admin/admin.html">Admin</a>
+      <a href="../../../index.html"><i class="fa fa-sign-out hide"></i> Sign out</a>
+      <a href="contact.html"><i class="fa fa-fw fa-envelope hide"></i> Contact Support</a>
+      <a href="profile.html"><i class="fa fa-fw fa-user hide"></i> Profile</a>
+      <a href="record.html"><i class="fa fa-fw fa-book hide"></i> My Records</a>
+      <a href="create_record.html"><i class="fa fa-plus hide"></i> New Report</a>
+</div>
+              
+        </div>
+    <div class="main>">
+
+      <div class="contact_container">
         <h3>Contact Form</h3>
 
   <form action="/action_page.php">
@@ -46,12 +44,13 @@
     <label for="subject">Subject</label>
     <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" class="contact_textarea"></textarea>
 
-    <input type="submit" value="Submit" class="contact_submit">
-  </form>
-</div>
-</div>
-</div>
-<div class="footer"><p>Designed by leticia</p></div>
-<script src="../../javascript/script.js"></script>
+          <input type="submit" value="Submit" class="contact_submit">
+        </form>
+      </div>
+    </div>
+  <div class="footer">
+    <p>Designed by leticia</p>
+  </div>
+  <script src="../../javascript/script.js"></script>
 </body>
 </html>
