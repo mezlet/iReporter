@@ -1,19 +1,17 @@
-import 'dotenv/config';
+import dotenv from 'dotenv';
 import express from 'express';
-import logger from 'console';
-import router from './routes';
 
+const PORT = process.env.PORT || 3000;
+
+dotenv.config();
 const app = express();
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(router);
-app.get('/', (req,res)=>{
-  res.send("Welcome to my page, please attach an api/v1/ to view my endpoints");
-});
-const PORT = process.env.PORT || 3000;
+
+app.get('/', (req, res) => res.status(200).send({ message: 'Hi welcome to my page' }));
+
 app.listen(PORT, () => {
-  logger.log(`Running at ${PORT}`);
+  console.log(`Running at ${PORT}`);
 });
 
 export default app;
