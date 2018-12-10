@@ -12,11 +12,5 @@ router.patch('/api/v1/red-flag/:id/location', redFlagController.updateLocation);
 router.patch('/api/v1/red-flag/:id/comment', redFlagController.updateComment);
 router.delete('/api/v1/red-flag/:id', redFlagController.delete);
 
-router.use((req, res) => {
-  res.status(404).send({
-    status: 404,
-    message: 'the response you are lookinf for does not exist',
-  });
-});
 
 export default router;
