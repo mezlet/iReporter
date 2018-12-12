@@ -8,7 +8,7 @@ import userdb from './Usingdb/controllers/user';
 // import Auth from './Usingdb/middleware/Auth';
 
 
-const PORT = process.env.PORT || 5500;
+const PORT = process.env.PORT || 5000;
 
 dotenv.config();
 // const incident = process.env.TYPE === 'db' ? incidentdb : incidentobj;
@@ -19,7 +19,7 @@ app.use(router);
 
 app.get('/', (req, res) => res.status(200).send({ message: 'Hello welcome to my page' }));
 app.post('/api/v1/auth/signup', userdb.create);
-
+app.post('/api/v1/auth/login', userdb.login);
 
 app.listen(PORT, () => {
   logger.log(`Running at ${PORT}`);

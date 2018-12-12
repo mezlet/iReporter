@@ -33,6 +33,31 @@ const User = {
         return Reply.badrequestError(res, message);
       });
   },
+
+  async login(req, res) {
+    console.log(req.body);
+    if (!req.body.email || !req.body.password) {
+      return Reply.badrequestError(res, 'missing Email/Password');
+    }
+    if (!Helper.isValidEmail(req.body.email)) {
+      return Reply.badrequestError(res, 'Please enter a valid Email');
+    }
+    const text = 'SELECT * FROM users WHERE email = $1';
+    try {
+      const { rows } = await db.query(text, [req.body.email]);
+      if (!rows[0]) {
+        return Reply.unauthorizedError(res, 'incorrect email');
+      }
+      if (!Helper.comparePassword(rows[0].password, req.body.password)) {
+        return Reply.unauthorizedError(res, 'incorrect password');
+      }
+      const token = Helper.generateToken(rows[0].id);
+      const data = [{ token, user: rows[0] }];
+      return Reply.successResponse(res, data);
+    } catch (error) {
+      return res.status(400).send(error);
+    }
+  },
 };
 
 export default User;
