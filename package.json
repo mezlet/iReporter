@@ -4,7 +4,7 @@
   "description": "a\u001b[3An incident report app",
   "main": "app",
   "scripts": {
-    "test": "nyc --reporter=html mocha --require @babel/register ./server/test --exit && npm run coverage",
+    "test": "nyc --reporter=html mocha --require @babel/register ./server/Usingjs/test/incidencetest.js --exit && npm run coverage",
     "lint": "eslint ./server --fix",
     "start": "node build/app",
     "start:dev": "npm run lint && nodemon --exec babel-node ./server/app",
@@ -27,7 +27,12 @@
     "dotenv": "^6.1.0",
     "express": "^4.16.4",
     "moment": "^2.22.2",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "bcrypt": "^3.0.2",
+    "jsonwebtoken": "^8.4.0",
+    "nodemailer": "^4.7.0",
+    "pg": "^7.7.1",
+    "uuid": "^3.3.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.5",
