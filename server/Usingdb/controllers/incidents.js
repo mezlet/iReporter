@@ -39,15 +39,6 @@ const Incident = {
       return Reply.serverError(res, error.message);
     }
   },
-  async getAll(req, res) {
-    try {
-      const { rows: data } = await db.query(Query.getRecords);
-      return data.length ? Reply.successResponse(res, data)
-        : Reply.notFoundError(res, 'no records in the db');
-    } catch (error) {
-      return Reply.serverError(res, error.message);
-    }
-  },
   async getRedFlag(req, res) {
     try {
       const { rows: data } = await db.query(Query.getType, ['red-flag']);
@@ -187,6 +178,16 @@ const Incident = {
         return Reply.badrequestError(res, message);
       });
   },
-
+  async delete(req, res) {
+    try {
+      const { rows } = await db.query(Query.deleteRecord, [req.params.id]);
+      if (!rows[0]) {
+        return Reply.notFoundError(res, 'Record not found');
+      }
+      return Reply.noContent(res, 'Record deleted');
+    } catch (error) {
+      return res.status(400).json(error);
+    }
+  },
 };
 export default Incident;
