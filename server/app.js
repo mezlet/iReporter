@@ -29,6 +29,8 @@ app.patch('/api/v1/incident/:id', Auth.verifyToken, incident.update);
 app.patch('/api/v1/incident/:id/status', Auth.verifyToken, incidentdb.updateStatus);
 app.patch('/api/v1/incident/:id/comment', Auth.verifyToken, incident.updateComment);
 app.patch('/api/v1/incident/:id/location', Auth.verifyToken, incident.updateLocation);
+app.delete('/api/v1/incident/:id', Auth.verifyToken, incident.delete);
+
 
 app.listen(PORT, () => {
   logger.log(`Running at ${PORT}`);
