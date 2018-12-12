@@ -46,7 +46,7 @@ margin-right: 200px;
 @media only screen and (max-width: 1000px) {
 .logo{
   margin-top:20px;
-  width:10%;
+  width:90px;
   height:60px;
   border:none;
   margin-bottom:50px;
@@ -245,7 +245,7 @@ font-size: 1.2rem;
 
 /**login form**/
 .login_container{
-background-image: url("../images/bg2.jpg");
+background-image: url("../images/bg.jpg");
 background-size:cover;
 background-repeat: no-repeat;
 position:absolute;
@@ -253,8 +253,8 @@ width:100%;
 }
 .log_form {
 width: 500px;
-margin-left: 160px;
-border: 1px solid rgb(165, 154, 154);
+margin-left: 35%;
+border: 1px solid rgb(252, 249, 249);
 height: 500px;
 margin-bottom: 100px;
 margin-top: 100px;
@@ -264,13 +264,15 @@ min-width: 320px;
 padding-right: 25px;
 padding-bottom: 100px;
 display:block;
+background-color: white;
+box-shadow:7px 4px 5px #dbd9d9
 }
 
 
 h2 {
 text-align: center;  
 margin-top:20px;
-color: rgb(250, 248, 248);
+color: rgb(13, 9, 71);
 margin-bottom: 20px;
 }
 
@@ -338,7 +340,7 @@ opacity: 0.8;
 background-color: #bbbbbb;
 }
 .form_extra{
-margin-top: 50px;
+margin-top: 40px;
 font-size: 18px;
 display: block;
 text-align: center;
@@ -391,13 +393,14 @@ line-height: 1.2;
 /************ sign up form */
 #signup_form {
 width: 700px;
-margin-left: 30px;
+margin-left: 30%;
 border: 1px solid rgb(230, 227, 227);
 height: auto;
 margin-bottom: 40px;
 margin-top: 50px;
 margin-right: auto;
-
+background-color: white;
+box-shadow:5px 4px 3px #dbd9d9
 }
 @media only screen and (max-width: 600px) {
 
@@ -636,10 +639,6 @@ h1 {
 text-align: center;  
 }
 
-
-
-
-
 .report_btn {
 background-color: #4CAF50;
 color: #ffffff;
@@ -659,21 +658,24 @@ opacity: 0.8;
 background-color: #bbbbbb;
 }
 
-
-legend{
-margin-left:70px;
-font-size: 30px;
-margin-bottom: 50px;
-}
-
 .personal_details{
-width:80%;
+width:50%;
 margin-left:auto;
 margin-right: auto;
 height: 500px;
 margin-bottom:50px;
 border:1px solid rgb(241, 235, 235);
+background-color: white;
+margin-top: 50px;
+
 }
+
+.profile_label{
+  font-size: 30px;
+text-align: center;
+margin-top: 30px;
+}
+
 
 
 .personal_details h4{
@@ -687,12 +689,14 @@ float:right;
 margin-right: 50px;
 }
 .report-summary{
-width:80%;
+width:50%;
 margin-left:auto;
 margin-right: auto;
 height: auto;
 margin-bottom:50px;
 border:1px solid rgb(241, 235, 235);
+background-color: white;
+
 }
 
 .report-list{
@@ -767,7 +771,6 @@ margin-top: 60px;
 /************** create report form ************/
 
 .report_container{
-padding-bottom:30px;
 }
 .report_heading{
 width:100%;
@@ -791,14 +794,12 @@ background-color: #000033;
 .report_form{
 width: 100%;
 height: auto;
-margin-bottom: 30px;
 
 }
 .form_content{
 width: 75%;
 height: auto;
 margin-top: 50px;
-margin-bottom: 50px;
 margin-left: 170px;
 margin-right: 100px;
 }
@@ -820,8 +821,6 @@ margin-right: 40px;
 width:100%;
 height:10%;
 background-color: white;
-border-top: 1px solid grey;
-margin-bottom: 10%;
 margin-top: 10%;
 
 } 
@@ -845,7 +844,6 @@ margin-bottom: 30px;
 width: 75%;
 height: auto;
 margin-top: 50px;
-margin-bottom: 50px;
 margin-left: 170px;
 margin-right: 100px;
 }
@@ -895,15 +893,14 @@ font-size: 20px;
       }
 .form_footer{
   width:100%;
-  height:150px;
-  background-color: white;
-  border-top: 1px solid grey;
+  height:160px;
+  background-color: rgb(252, 252, 253);
   
 } 
 
 .form_footer p{
   text-align: center;
-  font-size: 45px;
+  font-size: 25px;
   font-weight: bold;
   color: #095b9e;
   padding-top: 30px;
@@ -941,6 +938,10 @@ font-size: 20px;
   border: none;
   border-radius: 7px;
 
+}
+
+.res_btn{
+  display:none;
 }
 
 /** footer */
@@ -1145,7 +1146,7 @@ cursor: pointer;
 }
 }
 
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 950px) {
 .topnav.responsive {position: relative;}
 .topnav.responsive .icon {
   position: absolute;
@@ -1188,8 +1189,67 @@ margin-left: 50%;
 }
 
 
+.view_main{
+  background-image: url("../images/bg.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
+  position:absolute;
+  width:100%;
+  height: auto;
+  }
+
+  .profile_main{
+    background-image: url("../images/bg.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
+  position:absolute;
+  width:100%;
+  height: auto;
+  }
 
 
+  .card{
+    width:40%;
+    height:100%;
+    background-color: rgb(15, 12, 29);
+    margin-top: 5%;
+    margin-left:40%;
+  }
+
+  .card_label{
+    color: white;
+    margin-top: 30px;
+  }
+
+  .card_nav{
+    list-style: none;
+    width: 100%;
+  }
+
+  .card_nav li{
+    float: left;
+    width: 50%;
+    margin-left: -17%;
+  }
+
+  .card_nav a{
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .view_img{
+    margin-left: 30px;
+  }
+
+  .view_main p{
+    font-size: 25px;
+    color: rgb(8, 8, 44);
+  }
+
+  .view_main h4{
+    color: rgb(241, 241, 247);
+
+  }
 
 
 
