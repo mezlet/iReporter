@@ -10,6 +10,7 @@
     "start:dev": "npm run lint && nodemon --exec babel-node ./server/app",
     "postinstall": "npm run build",
     "build": "babel server --out-dir build",
+    "coveralls":"nyc --reporter=lcov --reporter=text-lcov npm test",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {
