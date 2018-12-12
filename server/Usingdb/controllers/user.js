@@ -35,7 +35,6 @@ const User = {
   },
 
   async login(req, res) {
-    console.log(req.body);
     if (!req.body.email || !req.body.password) {
       return Reply.badrequestError(res, 'missing Email/Password');
     }
