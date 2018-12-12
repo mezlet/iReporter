@@ -13,55 +13,58 @@
 <body>
     <div class="container">
 
-        <div class="banner">
- 
-            <a href="../../../index.html"><img src="../../images/logo.png" class="logo"></a>
+            <div class="topnav" id="myTopnav">
+                    <div class = "logo_bdy">
+                            <a href="../../../index.html"><img src="../../images/logo.png" class="logo"></a>
+        
+                    </div>
+                    <<div class =" navbdy">
+                            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+                            <a href="../../../index.html"><i class="fa fa-sign-out hide"></i> Sign out</a>
+                            <a href="../admin/admin.html">Admin</a>
+                            <a href="contact.html"><i class="fa fa-fw fa-envelope hide"></i> Contact Support</a>
+                            <a href="viewAll.html"><i class="fa fa-fw fa-bars hide"></i> View Records</a>
+                            <a href="profile.html"><i class="fa fa-fw fa-user hide"></i> Profile</a>
+                            <a href="record.html"><i class="fa fa-fw fa-book hide"></i> My Records</a>
+                            <a href="create_record.html"><i class="fa fa-plus hide"></i> New Report</a>
+                    </div>
+                        
+                  </div>
+  <div class="table_main">
 
-            <div id="mySidepanel" class="sidepanel">
+    <table>
+        <tr>
+            <th>Report ID</th>
+            <th>Date/Time</th>
+            <th>Category</th>
+            <th>Title</th>
+            <th>Location</th>
+            <th>Status</th>
 
-                <a href="../admin/admin.html">Admin</a>
-                <a href="../../../index.html"><i class="fa fa-sign-out hide"></i> Sign out</a>
-                <a href="contact.html"><i class="fa fa-fw fa-envelope hide"></i> Contact Support</a>
-                <a href="profile.html"><i class="fa fa-fw fa-user hide"></i> Profile</a>
-                <a href="record.html"><i class="fa fa-fw fa-book hide"></i> My Records</a>
-                <a href="create_record.html"><i class="fa fa-plus hide"></i> New Report</a>
-            </div>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2018-11-25T17:10:52.953Z</td>
+            <td>red-flag</td>
+            <td>Le Lorem Ipsum est simplement du faux texte employé dans</td>
+            <td>shoprite</td>
+            <td>pending</td>
+            <td><i class="fa fa-eye tbl_icon" id="eye"></i><i class="fa fa-edit tbl_icon"></i><i id="delete"
+                    class="fa fa-trash tbl_icon"></i></td>
+        </tr>
 
+        <tr>
+                <td>2</td>
+                <td>Mon 24th July 2018</td>
+                <td>intervention</td>
+                <td>Le Lorem Ipsum est simplement du faux texte employé dans</td>
+                <td>Fadeyi</td>
+                <td>pending</td>
+            <td><i class="fa fa-eye tbl_icon" id="eye"></i><i class="fa fa-edit tbl_icon"></i><i id="delete"
+                    class="fa fa-trash tbl_icon"></i></td>
+        </tr>
 
-        </div>
-        <div class="table_main">
-
-            <table>
-                <tr>
-                    <th>Report ID</th>
-                    <th>Date/Time</th>
-                    <th>Category</th>
-                    <th>Title</th>
-                    <th>Location</th>
-                    <th>Status</th>
-
-                </tr>
-                <tr>
-                    <td><input tpe="text" placeholder="1"></td>
-                    <td><input tpe="text" placeholder="2018-11-25T17:10:52.953Z"></td>
-                    <td><input tpe="text" placeholder="red-flag"></td>
-                    <td><input tpe="text" placeholder="Le Lorem Ipsum est simplement du faux texte employé dans "></td>
-                    <td><input tpe="text" placeholder="lat 6.56, long 3.37"></td>
-                    <td><input tpe="text" placeholder="pending"></td>
-                   <td><i class="fa fa-eye tbl_icon" id= "eye"></i><i class="fa fa-edit tbl_icon"></i><i id="delete" class="fa fa-trash tbl_icon"></i></td>                
-                 </tr>
-
-                 <tr>
-                        <td><input tpe="text" placeholder="2"></td>
-                        <td><input tpe="text" placeholder="2018-11-25T17:10:52.953Z"></td>
-                        <td><input tpe="text" placeholder="intervention"></td>
-                        <td><input tpe="text" placeholder="Le Lorem Ipsum est simplement du faux texte employé dans "></td>
-                        <td><input tpe="text" placeholder="lat 6.56, long 3.37"></td>
-                        <td><input tpe="text" placeholder="pending"></td>
-                       <td><i class="fa fa-eye tbl_icon" id= "eye"></i><i class="fa fa-edit tbl_icon"></i><i id="delete" class="fa fa-trash tbl_icon"></i></td>                
-                     </tr>
-
-            </table>
+    </table> 
 
 
         </div>

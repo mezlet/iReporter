@@ -9,26 +9,38 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="../../css/style.css" />
 </head>
-
+<style>
+        #map {
+            height: 100%;
+            width: 100%;
+          }
+          html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+          }
+</style>
 <body>
     <div class="container">
 
-        <div class="banner">
-
-            <a href="../index.html"><img src="../../images/logo.png" class="logo"></a>
-
-            <div id="mySidepanel" class="sidepanel">
-
-                <a href="../admin/admin.html">Admin</a>
-                <a href="../../../index.html"><i class="fa fa-sign-out hide"></i> Sign out</a>
-                <a href="contact.html"><i class="fa fa-fw fa-envelope hide"></i> Contact Support</a>
-                <a href="profile.html"><i class="fa fa-fw fa-user hide"></i> Profile</a>
-                <a href="record.html"><i class="fa fa-fw fa-book hide"></i> My Records</a>
-                <a href="create_record.html"><i class="fa fa-plus hide"></i> New Report</a>
-            </div>
-
-
-        </div>
+            <div class="topnav" id="myTopnav">
+                    <div class = "logo_bdy">
+                            <a href="../../../index.html"><img src="../../images/logo.png" class="logo"></a>
+        
+                    </div>
+                    <div class =" navbdy">
+                            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+                            <a href="../../../index.html"><i class="fa fa-sign-out hide"></i> Sign out</a>
+                            <a href="../admin/admin.html">Admin</a>
+                            <a href="contact.html"><i class="fa fa-fw fa-envelope hide"></i> Contact Support</a>
+                            <a href="viewAll.html"><i class="fa fa-fw fa-bars hide"></i> View Records</a>
+                            <a href="profile.html"><i class="fa fa-fw fa-user hide"></i> Profile</a>
+                            <a href="record.html"><i class="fa fa-fw fa-book hide"></i> My Records</a>
+                            <a href="create_record.html"><i class="fa fa-plus hide"></i> New Report</a>
+                    </div>
+                        
+                  </div>
+        
         <div class="report_container">
             <div class=report_heading>
                 <h1>Create A Report</h1>
@@ -51,14 +63,15 @@
                 <div class="form_content">
                     <h1>Additional Information</h1>
                     <label class="report_label">Location</label>
-                    <input type="text" class="report_select" placeholder="e.g Enter the address of the incident ">
+                    <input type="text" id="address" class="report_select" onkeyup="getGeolocation()" placeholder="e.g Enter the address of the incident ">
                     <div id ="map"></div>
-                    <label class="report_label">Images (optional)</label><br>
-                    <input type = "file"  class="report_label" >
-                    <div id = "image"></div><br><br>
                     <label class="report_label">Videos (optional)</label><br>
-                    <input type = "file"  class="report_label" >
-                    <div id ="video"></div>
+                    <input type = "file" id='file2' class="report_label" accept = "video/mp4" onchange="return fileValidation()" >
+                    <div id="videoPreview"></div>
+                    <label class="report_label">Images (optional)</label><br>
+                    <input type = "file"  class="report_label" accept="image/jpeg, image/jpg, image/png, image/gif" id="file" onchange="return imageValidation()">
+                    <div id="imagePreview"></div><br><br>
+                    
                 </div>
 
                 <div class="form_footer">
@@ -67,6 +80,8 @@
                     <input type="Reset" value="Reset" class="form_btn_reset">
                     <button class="form_btn_cancel">Cancel</button>
                 </div>
+                    <input type="submit" value="Submit" class="res_btn">
+                    
 
             </form>
 
@@ -77,6 +92,8 @@
         </div>
     </div>
     <script src="../../javascript/script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdayGjPOvu1Xn-0ky-WVMfNSVYGaoKc-M&callback=initMap">
+    </script>
 </body>
 
 </html>
