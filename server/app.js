@@ -17,7 +17,7 @@ const app = express();
 app.use(express.json());
 app.use(router);
 
-app.get('/', (req, res) => res.status(200).send({ message: 'Hi welcome to my page' }));
+app.get('/', (req, res) => res.status(200).send({ message: 'Hello welcome to my page' }));
 
 /* app.post('/api/v1/incident', Auth.verifyToken, incident.create);
 app.get('/api/v1/incident', Auth.verifyToken, incident.getAll);
