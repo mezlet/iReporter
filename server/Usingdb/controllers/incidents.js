@@ -39,5 +39,15 @@ const Incident = {
       return Reply.serverError(res, error.message);
     }
   },
+  async getAll(req, res) {
+    try {
+      const { rows: data } = await db.query(Query.getRecords);
+      return data.length ? Reply.successResponse(res, data)
+        : Reply.notFoundError(res, 'no records in the db');
+    } catch (error) {
+      return Reply.serverError(res, error.message);
+    }
+  },
+
 };
 export default Incident;
