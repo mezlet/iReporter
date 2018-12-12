@@ -6,7 +6,7 @@ import * as Schema from '../helpers/validateSchema';
 import Validate from '../helpers/validate';
 import * as Query from '../db/queries';
 
-const incidents = {
+const Incident = {
 
   async create(req, res) {
     return Validate(req.body, Schema.record)
@@ -29,5 +29,15 @@ const incidents = {
         return Reply.badrequestError(res, message);
       });
   },
+
+  async getAll(req, res) {
+    try {
+      const { rows: data } = await db.query(Query.getRecords);
+      return data.length ? Reply.successResponse(res, data)
+        : Reply.notFoundError(res, 'no records in the db');
+    } catch (error) {
+      return Reply.serverError(res, error.message);
+    }
+  },
 };
-export default incidents;
+export default Incident;

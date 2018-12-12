@@ -20,8 +20,8 @@ app.use(router);
 app.get('/', (req, res) => res.status(200).send({ message: 'Hello welcome to my page' }));
 app.post('/api/v1/auth/signup', userdb.create);
 app.post('/api/v1/auth/login', userdb.login);
-app.post('/api/v1/incidents', Auth.verifyToken, incident.create);
-
+app.post('/api/v1/incident', Auth.verifyToken, incident.create);
+app.get('/api/v1/incident', Auth.verifyToken, incident.getAll);
 
 app.listen(PORT, () => {
   logger.log(`Running at ${PORT}`);
