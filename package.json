@@ -4,7 +4,7 @@
   "description": "a\u001b[3An incident report app",
   "main": "app",
   "scripts": {
-    "test": "nyc --reporter=html mocha --require @babel/register ./server/Usingdb/test/index.js --exit && npm run coverage",
+    "test": "cross-env NODE_ENV=test nyc --reporter=html mocha --require @babel/register ./server/Usingdb/test/* --exit",
     "lint": "eslint ./server --fix",
     "start": "node build/app",
     "createTable": "node db createIncidentTable && node db createUserTable",
@@ -53,6 +53,7 @@
     "chai": "^4.2.0",
     "chai-http": "^4.2.0",
     "coveralls": "^3.0.2",
+    "cross-env": "^5.2.0",
     "eslint": "^5.9.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",

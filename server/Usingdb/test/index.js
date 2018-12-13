@@ -1,12 +1,10 @@
-import babel_polyfill from 'babel-polyfill';
 import chai from 'chai';
 import faker from 'faker';
 import chaiHttp from 'chai-http';
 import Helper from '../helpers/helper';
 import prepareDB from '../db/db';
 import server from '../../app';
-import * as Mock from './mockData/mock';
-
+import * as Mock from './mock';
 
 chai.should();
 chai.use(chaiHttp);
@@ -59,6 +57,7 @@ describe('POST api/v1/auth/signup', () => {
       .post(Mock.endpoints.signup)
       .send(Mock.exampleUser)
       .end((err, res) => {
+        console.log(res);
         if (err) done();
         res.should.have.status(500);
         res.body.should.have.property('message');
