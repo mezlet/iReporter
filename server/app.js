@@ -1,3 +1,4 @@
+import babel_polyfill from 'babel-polyfill';
 import dotenv from 'dotenv';
 import logger from 'console';
 import express from 'express';
