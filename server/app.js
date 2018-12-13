@@ -22,14 +22,16 @@ app.get('/', (req, res) => res.status(200).send({ message: 'Hello welcome to my 
 app.post('/api/v1/auth/signup', userdb.create);
 app.post('/api/v1/auth/login', userdb.login);
 app.post('/api/v1/incident', Auth.verifyToken, incidentdb.create);
-app.get('/api/v1/incident', Auth.verifyToken, incident.getAll);
-app.get('/api/v1/redflag', Auth.verifyToken, incident.getRedFlag);
-app.get('/api/v1/intervention', Auth.verifyToken, incident.getIntervention);
-app.get('/api/v1/incident/:id', Auth.verifyToken, incident.getOne);
-app.patch('/api/v1/incident/:id', Auth.verifyToken, incident.update);
+app.get('/api/v1/incident', Auth.verifyToken, incidentdb.getAll);
+app.get('/api/v1/redflag', Auth.verifyToken, incidentdb.getRedFlag);
+app.get('/api/v1/intervention', Auth.verifyToken, incidentdb.getIntervention);
+app.get('/api/v1/incident/:id', Auth.verifyToken, incidentdb.getOne);
+app.patch('/api/v1/incident/:id', Auth.verifyToken, incidentdb.update);
 app.patch('/api/v1/incident/:id/status', Auth.verifyToken, incidentdb.updateStatus);
-app.patch('/api/v1/incident/:id/comment', Auth.verifyToken, incident.updateComment);
-app.patch('/api/v1/incident/:id/location', Auth.verifyToken, incident.updateLocation);
+app.patch('/api/v1/incident/:id/comment', Auth.verifyToken, incidentdb.updateComment);
+app.patch('/api/v1/incident/:id/location', Auth.verifyToken, incidentdb.updateLocation);
+app.delete('/api/v1/incident/:id', Auth.verifyToken, incident.delete);
+
 
 app.listen(PORT, () => {
   logger.log(`Running at ${PORT}`);
