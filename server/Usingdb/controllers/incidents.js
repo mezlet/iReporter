@@ -1,4 +1,4 @@
-import uuidv4 from 'uuid/v4';
+
 import db from '../db';
 import * as Reply from '../helpers/responses';
 import Helper from '../helpers/helper';
@@ -15,7 +15,7 @@ const Incident = {
         const {
           type, location, image, video, comment,
         } = response;
-        const payload = [uuidv4(), userID, type, location, image, video, comment];
+        const payload = [userID, type, location, image, video, comment];
         try {
           const { rows } = await db.query(Query.createRecord, payload);
           const data = [{ user: rows[0] }];
@@ -51,7 +51,7 @@ const Incident = {
 
   async getIntervention(req, res) {
     try {
-      const { rows: data } = await db.query(Query.getType, ['intevention']);
+      const { rows: data } = await db.query(Query.getType, ['intervention']);
       return data.length ? Reply.successResponse(res, data)
         : Reply.notFoundError(res, 'no intervention record(s) in the db');
     } catch (error) {
@@ -70,6 +70,16 @@ const Incident = {
     }
   },
 
+  async getMyIncidents(req, res) {
+    const userID = Helper.decodeToken(req.headers['x-access-token']).userId;
+    try {
+      const { rows: data } = await db.query(Query.getUserIncidents, [userID]);
+      return data.length ? Reply.successResponse(res, data)
+        : Reply.notFoundError(res, 'you have no incidents yet');
+    } catch (error) {
+      return Reply.serverError(res, error.message);
+    }
+  },
   async update(req, res) {
     return Validate(req.body, Schema.updateRecord)
       .then(async (response) => {
@@ -141,9 +151,9 @@ const Incident = {
             'Update on Your Reported Incident',
             `Your reported incident with id ${req.params.id} has been ${req.body.status}`,
           );
-          return res.status(200).json(queryResponse.rows[0]);
-        } catch (err) {
-          return res.status(400).json(err);
+          return Reply.successResponse(res, queryResponse.rows[0]);
+        } catch (error) {
+          return Reply.serverError(res, error.message);
         }
       })
       .catch((error) => {
@@ -180,13 +190,19 @@ const Incident = {
   },
   async delete(req, res) {
     try {
-      const { rows } = await db.query(Query.deleteRecord, [req.params.id]);
+      const { rows } = await db.query(Query.getRecord, [req.params.id]);
+      const userID = Helper.decodeToken(req.headers['x-access-token']).userId;
       if (!rows[0]) {
         return Reply.notFoundError(res, 'Record not found');
+      } if (rows[0] && rows[0].createdby !== userID) {
+        return Reply.unauthorizedError(res, 'You no get authority');
       }
-      return Reply.noContent(res, 'Record deleted');
+      const deleteResponse = await db.query(Query.deleteRecord, [req.params.id]);
+      if (deleteResponse.rows[0]) {
+        return Reply.noContent(res, 'Record deleted');
+      }
     } catch (error) {
-      return res.status(400).json(error);
+      return res.status(500).json({ status: 500, error: error.message });
     }
   },
 };

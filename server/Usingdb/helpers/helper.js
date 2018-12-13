@@ -49,7 +49,7 @@ const Helper = {
     });
 
     const mailOptions = {
-      from: process.env.EMAIL,
+      from: `"${process.env.EMAIL_SENDER}" <${process.env.EMAIL}>`,
       to: recipient,
       subject,
       text: messageBody,
