@@ -1,0 +1,64 @@
+{
+  "name": "ireporter",
+  "version": "1.0.0",
+  "description": "a\u001b[3An incident report app",
+  "main": "app",
+  "scripts": {
+    "test": "nyc --reporter=html mocha --require @babel/register ./server/Usingdb/test/index.js --exit && npm run coverage",
+    "lint": "eslint ./server --fix",
+    "start": "node build/app",
+    "createTable": "node db createIncidentTable && node db createUserTable",
+    "start:dev": "npm run lint && nodemon --exec babel-node ./server/app",
+    "postinstall": "npm run build",
+    "build": "babel server --out-dir build",
+    "coveralls": "nyc --reporter=lcov --reporter=text-lcov npm test",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mezlet/iReporter.git"
+  },
+  "author": "leticia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mezlet/iReporter/issues"
+  },
+  "homepage": "https://github.com/mezlet/iReporter#readme",
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-stage-0": "^7.0.0",
+    "babel-polyfill": "^6.26.0",
+    "bcrypt": "^3.0.2",
+    "body-parser": "^1.18.3",
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.0",
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4",
+    "faker": "^4.1.0",
+    "joi": "^14.3.0",
+    "jsonwebtoken": "^8.4.0",
+    "moment": "^2.22.2",
+    "nodemailer": "^4.7.0",
+    "path": "^0.12.7",
+    "pg": "^7.7.1",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.6",
+    "@babel/node": "^7.0.0",
+    "@babel/plugin-syntax-object-rest-spread": "^7.0.0",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/register": "^7.0.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.0",
+    "coveralls": "^3.0.2",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "make-runnable": "^1.3.6",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.7",
+    "nyc": "^13.1.0"
+  }
+}
