@@ -9,7 +9,6 @@
     "start": "node build/app",
     "createTable": "node db createIncidentTable && node db createUserTable",
     "start:dev": "npm run lint && nodemon --exec babel-node ./server/app",
-    "postinstall": "npm run build",
     "build": "babel server dist --source-maps",
     "coveralls": "nyc --reporter=lcov --reporter=text-lcov npm test",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
