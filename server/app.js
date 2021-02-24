@@ -9,7 +9,7 @@ import userdb from './Usingdb/controllers/user';
 import Auth from './Usingdb/middleware/Auth';
 
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 
 dotenv.config();
 // const incident = process.env.TYPE === 'db' ? incidentdb : incidentobj;
