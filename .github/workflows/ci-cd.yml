@@ -1,12 +1,10 @@
-ame: CI/CD
+name: CI/CD
 
 on:
   push:
-    branches:
-      - staging
+    branches: [staging]
   pull_request:
-    branches:
-      - staging
+    branches: [staging]
 
 jobs:
   buildAndTest:
